@@ -25,12 +25,10 @@ RSpec.describe 'student show page' do
         expect(page).to_not have_content(@english.name)
         expect(page).to have_content(@history.name)
         expect(page).to have_content(@geometry.name)
-        # save_and_open_page
-        # expect(page).to have_content()
+
+        expect(page).to have_content(@history.grade(@billy))
+        expect(page).to have_content(@geometry.grade(@billy))
       end
     end
   end
 end
-
-# - the name of each course the student is enrolled in
-# - the student's grade for each course

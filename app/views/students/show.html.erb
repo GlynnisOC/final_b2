@@ -3,4 +3,5 @@
 <h3>Courses</h3>
 <% @student.courses.each do |course| %>
   <ul><li><%= course.name %></li></ul>
+  <p>Grade: <%= course.grade(@student) %></p>
 <% end %>
