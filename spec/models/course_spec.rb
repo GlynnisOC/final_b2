@@ -24,7 +24,7 @@ RSpec.describe Course do
       @history.course_students.create!(student_id: @billy.id, grade: 78.0)
       @geometry.course_students.create!(student_id: @bob.id, grade: 66.0)
       @geometry.course_students.create!(student_id: @joe.id, grade: 72.0)
-      
+
       expect(@geometry.grade(@billy)).to eq(79.0)
     end
   end
