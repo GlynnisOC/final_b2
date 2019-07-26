@@ -19,10 +19,9 @@ RSpec.describe 'courses index page' do
 
     describe 'when I visit the courses index page' do
       it "I see the course name and each student listed by grade, highest to lowest" do
-        # binding.pry
 
         visit courses_path
-        save_and_open_page
+
         within "#course-#{@geometry.id}" do
           expect(page).to have_content(@geometry.name)
           expect(page).to have_content(@billy.name)
